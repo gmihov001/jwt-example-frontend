@@ -10,7 +10,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			logout: () => {
 				setStore({ token: null });
 			},
-			login: (username, email) => {
+			login: (password, email) => {
 				fetch("https://3000-f2025c8e-20db-40ce-bba4-1311de434fef.ws-us03.gitpod.io/login", {
 					method: "POST",
 					headers: {
@@ -20,7 +20,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 					body: JSON.stringify({
 						email: email,
-						username: username
+						password: password
 					})
 				})
 					.then(response => response.json())
