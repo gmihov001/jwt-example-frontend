@@ -1,28 +1,30 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			favorites: [],
+			characters: [],
+			planets: []
 		},
 		actions: {
+			logout: () => {
+				setStore({ token: null });
+			},
+			login: () => {},
+			addFavorite: newItem => {
+				var storeCopy = getStore();
+
+				var newFavorites = storeCopy.favorites.find((element, index) => {
+					return element != "Darth Vader";
+				});
+
+				setStore({ favorites: newFavorites });
+			},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
 			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+				// fetch().then().then(data => setStore({ characters: data }))
 			},
 			changeColor: (index, color) => {
 				//get the store
