@@ -32,7 +32,7 @@ export class Login extends React.Component {
 											placeholder="Enter email"
 										/>
 										<small id="emailHelp" className="form-text text-muted">
-											Well never share your email with anyone else.
+											We will never share your email with anyone else.
 										</small>
 									</div>
 									<div className="form-group">
