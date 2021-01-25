@@ -9,7 +9,7 @@ export class Login extends React.Component {
 		super(props);
 
 		this.state = {
-			username: "",
+			password: "",
 			email: ""
 		};
 	}
@@ -38,7 +38,7 @@ export class Login extends React.Component {
 									<div className="form-group">
 										<label htmlFor="exampleInputPassword1">Password</label>
 										<input
-											onChange={e => this.setState({ username: e.target.value })}
+											onChange={e => this.setState({ password: e.target.value })}
 											type="text"
 											className="form-control"
 											id="exampleInputPassword1"
@@ -52,7 +52,7 @@ export class Login extends React.Component {
 										</label>
 									</div>
 									<button
-										onClick={() => actions.login(this.state.username, this.state.email)}
+										onClick={() => actions.login(this.state.password, this.state.email)}
 										type="submit"
 										className="btn btn-primary">
 										Submit
