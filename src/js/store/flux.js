@@ -36,13 +36,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch("https://3000-brown-peacock-suy68rlj.ws-us03.gitpod.io/funnyword", {
 					method: "POST",
 					headers: {
+						Authorization: "Bearer " + getStore().token,
 						"Content-Type": "application/json"
-						// add this to any fetch in headers  authorization: "Bearer " + store.token
 					},
 
 					body: JSON.stringify({
-						email: email,
-						password: password
+						funnyword: "Funny word"
 					})
 				})
 					.then(response => response.json())
