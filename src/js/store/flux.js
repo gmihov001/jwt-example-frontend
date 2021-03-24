@@ -11,7 +11,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ token: null });
 			},
 			login: (password, email) => {
-				fetch("https://3000-e9acf05e-30dc-490b-8c7f-d5d6d6b85d99.ws-us03.gitpod.io/login", {
+				fetch("https://3000-brown-peacock-suy68rlj.ws-us03.gitpod.io/login", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json"
