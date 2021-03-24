@@ -8,8 +8,8 @@ export const Home = () => (
 		<p>
 			<img src={rigoImage} />
 		</p>
-		<a href="#" className="btn btn-success">
+		<button href="#" className="btn btn-success">
 			Add a funny word
-		</a>
+		</button>
 	</div>
 );

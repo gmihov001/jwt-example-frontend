@@ -45,13 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 					.then(response => response.json())
-					.then(token => {
-						if (typeof token.msg != "undefined") {
-							// Notify.error(token.msg);
-						} else {
-							setStore({ token: token });
-						}
-					});
+					.then(resp => console.log(resp));
 			},
 			addFavorite: newItem => {
 				var storeCopy = getStore();
