@@ -28,7 +28,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						if (typeof token.msg != "undefined") {
 							// Notify.error(token.msg);
 						} else {
-							setStore({ token: token.jwt });
+							setStore({ token: token });
 						}
 					});
 			},
