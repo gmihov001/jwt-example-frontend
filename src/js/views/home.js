@@ -9,7 +9,7 @@ export const Home = () => (
 			<img src={rigoImage} />
 		</p>
 		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
+			Add a funny word
 		</a>
 	</div>
 );
