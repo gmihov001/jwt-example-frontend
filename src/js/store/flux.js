@@ -32,6 +32,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 						}
 					});
 			},
+			sendFunnyWord: () => {
+				fetch("https://3000-brown-peacock-suy68rlj.ws-us03.gitpod.io/funnyword", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+						// add this to any fetch in headers  authorization: "Bearer " + store.token
+					},
+
+					body: JSON.stringify({
+						email: email,
+						password: password
+					})
+				})
+					.then(response => response.json())
+					.then(token => {
+						if (typeof token.msg != "undefined") {
+							// Notify.error(token.msg);
+						} else {
+							setStore({ token: token });
+						}
+					});
+			},
 			addFavorite: newItem => {
 				var storeCopy = getStore();
 
